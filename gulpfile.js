@@ -7,20 +7,6 @@ const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
 const order = require("gulp-order");
 
-//default task
-gulp.task("default", ["styles", "copy-html", "copy-imgs", "scripts", "scripts-dist"], function() {
-	gulp.watch('css/*.css', ['styles']);
-	gulp.watch('/index.html', ['copy-html']);
-});
-
-//prepare for distribution
-gulp.task("dist", [
-	"copy-html",
-	"copy-imgs",
-	"styles",
-	"scripts-dist"
-]);
-
 //copies the html to the disribution folder
 gulp.task("copy-html", function() {
 	gulp.src("index.html")
@@ -62,4 +48,18 @@ gulp.task("scripts-dist", function() {
 	.pipe(uglify())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest("dist/js"))
+});
+
+//prepare for distribution
+gulp.task("dist", gulp.parallel(
+	"copy-html",
+	"copy-imgs",
+	"styles",
+	"scripts-dist"
+));
+
+//default task
+gulp.task("default", gulp.parallel("styles", "copy-html", "copy-imgs", "scripts", "scripts-dist"), function() {
+	gulp.watch('css/*.css', ['styles']);
+	gulp.watch('/index.html', ['copy-html']);
 });
