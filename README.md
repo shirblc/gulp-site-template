@@ -25,13 +25,6 @@ An empty site template for any use. Comes fully equipped with Gulp and several o
 1. Download or clone the repo.
 2. cd into the project directory.
 3. Run ```npm install```.
-4. Start building. Don't forget to add each JavaScript file you create to the concatenation order in the Gulp tasks 'scripts' and 'scripts-dist'.
-
-### Unit-Testing-Gulp Branch
-
-1. Download or clone the repo.
-2. cd into the project directory.
-3. Run ```npm install```.
 4. Set up your tests in the Jasmine specs folder.
 5. Start building. Don't forget to add each JavaScript file you create to the concatenation order in the Gulp tasks 'scripts' and 'scripts-dist'.
 
