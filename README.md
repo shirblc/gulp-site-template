@@ -25,13 +25,6 @@ An empty site template for any use. Comes fully equipped with Gulp and several o
 1. Download or clone the repo.
 2. cd into the project directory.
 3. Run ```npm install```.
-4. Start building. Don't forget to add each JavaScript file you create to the concatenation order in the Gulp tasks 'scripts' and 'scripts-dist'.
-
-### Unit-Testing-Gulp Branch
-
-1. Download or clone the repo.
-2. cd into the project directory.
-3. Run ```npm install```.
 4. Set up your tests in the Jasmine specs folder.
 5. Start building. Don't forget to add each JavaScript file you create to the concatenation order in the Gulp tasks 'scripts' and 'scripts-dist'.
 
@@ -54,7 +47,7 @@ The Developmnt Mode folder (parent folder) includes:
 3. **JS Folder** - For all scripts.
 4. **IMG Folder** - For all images.
 5. **Tests Folder** (unit testing branches only) - For Jasmine spec files.
-	- unit-testing-gulp - Contains only the JavaScript specs file. The specRunner will open once you run the gulp testing task.
+	- Master - Contains only the JavaScript specs file. The specRunner will open once you run the gulp testing task.
 	- unit-testing-manual - Contains the Jasmine library, the specRunner and whatever specs files you add.
 6. **Dist Folder** - See "Production Mode"
 
