@@ -5,6 +5,7 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
+const jasmineBrowser = require('gulp-jasmine-browser');
 const order = require("gulp-order");
 
 //copies the html to the disribution folder
@@ -64,6 +65,24 @@ function scriptsDist()
 		.pipe(gulp.dest("dist/js"))
 }
 
+//automatic testing in the Jasmine headless browser
+function jasmineBrowserTest()
+{
+	return gulp
+		.src(["dist/js/all.js", "tests/specs.js"])
+		.pipe(jasmineBrowser.specRunner({ console: true }))
+		.pipe(jasmineBrowser.headless({ driver: "chrome" }));
+}
+
+//testing in whatever browser you want to use; just enter "localhost:3001" in the address line
+function browserTests()
+{
+	return gulp
+		.src(["dist/js/all.js", "tests/specs.js"])
+		.pipe(jasmineBrowser.specRunner())
+		.pipe(jasmineBrowser.server({ port: 3001 }));
+}
+
 //prepare for distribution
 function dist()
 {
@@ -91,5 +110,7 @@ exports.copyImgs = copyImgs;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.scriptsDist = scriptsDist;
+exports.jasmineBrowserTest = jasmineBrowserTest;
+exports.browserTests = browserTests;
 exports.dist = dist;
 exports.watch = watch;
