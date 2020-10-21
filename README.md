@@ -1,5 +1,9 @@
 # Empty Site
 
+[![Known Vulnerabilities](https://snyk.io/test/github/shirblc/gulp-site-template/badge.svg?targetFile=package.json)](https://snyk.io/test/github/shirblc/gulp-site-template?targetFile=package.json)
+[![dependencies Status](https://david-dm.org/shirblc/gulp-site-template/status.svg)](https://david-dm.org/shirblc/gulp-site-template)
+[![devDependencies Status](https://david-dm.org/shirblc/gulp-site-template/dev-status.svg)](https://david-dm.org/shirblc/gulp-site-template)
+
 ## Version
 
 Version 1.
@@ -74,7 +78,21 @@ The site uses several tools to maximize compatibility:
 5. **Gulp-Uglify** - A Gulp plugin which minimises the single JavaScript file (Concat's output). For more info check the [Gulp-uglify](https://www.npmjs.com/package/gulp-uglify) page on NPM.
 6. **Gulp-Sourcemaps** - A Gulp plugin utilizing the source maps tool. For more info check the [Gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) page on NPM.
 7. **Gulp-order** - A gulp plugin to set the order in which the JavaScript files will be concatenated. For more info, check the [Gulp-order](https://github.com/sirlantis/gulp-order) GitHub page.
-8. **Gulp-Jasmine-Browser** - A headless browser extension for the unit-testing tool Jasmine. The site also includes **Jasmine-core** and **Puppeteer** in order to execute Jasmine tests from the command line. For more info check the [Gulp-jasmine-browser](https://www.npmjs.com/package/gulp-jasmine-browser) page on NPM or the [Jasmine documentation](https://jasmine.github.io/) page.
+8. **Jasmine** - An open-source behaviour-driven testing framework. For more information, check Jasmine's [official site](https://jasmine.github.io). Included packages:
+    - **jasmine-core**
+    - **jasmine-spec-reporter**
+9. **Karma** - An open-source test-runner, used to run the tests on various devices with a test server. For more information, check Karma's [official site](https://karma-runner.github.io/latest/index.html). Included packages:
+    - **karma**
+    - **karma-jasmine** - A Karma adapter for the Jasmine framework. [Project repo.](https://github.com/karma-runner/karma-jasmine)
+    - **karma-jasmine-html-reporter** - A reporter that shows test results in HTML. [NPM page.](https://www.npmjs.com/package/karma-jasmine-html-reporter).
+    - **karma-chrome-launcher** - A launcher for Chrome, Chrome Canary and Chromuim. [Project repo.](https://github.com/karma-runner/karma-chrome-launcher).
+    - **karma-coverage** - Code coverage generator. [Project repo.](https://github.com/karma-runner/karma-coverage)
+    - **karma-coverage-istanbul-reporter** - Code coverage generator reporter. [NPM page.](https://www.npmjs.com/package/karma-coverage-istanbul-reporter)
+    - **karma-sourcemap-loader** - A preprocessor that loads existing source maps. [NPM page.](https://www.npmjs.com/package/karma-sourcemap-loader)
+
+## Tests
+
+There's a test file in [tests/specs.js](./tests/specs.js), in which all site tests are written. The Karma test runner then runs this tests file against the final distribution version of the site's script. Tests are run using `gulp unitTest`.
 
 ## Known Issues
 
