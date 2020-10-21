@@ -5,8 +5,8 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
-const jasmineBrowser = require('gulp-jasmine-browser');
 const order = require("gulp-order");
+const Server = require('karma').Server;
 
 //copies the html to the disribution folder
 function copyHtml()
@@ -42,7 +42,7 @@ function scripts()
 		.pipe(sourcemaps.init())
 		.pipe(babel({presets: ['@babel/preset-env']}))
 		.pipe(order([
-		
+
 		]))
 		.pipe(concat('all.js'))
 		.pipe(sourcemaps.write())
@@ -57,7 +57,7 @@ function scriptsDist()
 		.pipe(sourcemaps.init())
 		.pipe(babel({presets: ['@babel/preset-env']}))
 		.pipe(order([
-		
+
 		]))
 		.pipe(concat('all.js'))
 		.pipe(uglify())
@@ -65,22 +65,12 @@ function scriptsDist()
 		.pipe(gulp.dest("dist/js"))
 }
 
-//automatic testing in the Jasmine headless browser
-function jasmineBrowserTest()
+// automatic testing via Karma
+function unitTest()
 {
-	return gulp
-		.src(["dist/js/all.js", "tests/specs.js"])
-		.pipe(jasmineBrowser.specRunner({ console: true }))
-		.pipe(jasmineBrowser.headless({ driver: "chrome" }));
-}
-
-//testing in whatever browser you want to use; just enter "localhost:3001" in the address line
-function browserTests()
-{
-	return gulp
-		.src(["dist/js/all.js", "tests/specs.js"])
-		.pipe(jasmineBrowser.specRunner())
-		.pipe(jasmineBrowser.server({ port: 3001 }));
+	return new Server({
+	    configFile: __dirname + '/karma.conf.js'
+	  }).start();
 }
 
 //prepare for distribution
@@ -89,8 +79,8 @@ function dist()
 	return gulp
 		.parallel(
 			copyHtml,
-			copyImgs, 
-			styles, 
+			copyImgs,
+			styles,
 			scriptsDist
 		);
 }
