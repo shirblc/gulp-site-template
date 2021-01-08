@@ -26,7 +26,7 @@
     "karma-jasmine": "^4.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
     "karma-sourcemap-loader": "^0.3.8",
-    "postcss": "^8.2.2"
+    "postcss": "^8.2.3"
   },
   "dependencies": {
     "gulp-concat": "^2.6.1",
