@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: jasmine-core
+    versions:
+    - 3.7.0
+  - dependency-name: postcss
+    versions:
+    - 8.2.5
+    - 8.2.7
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.16
+    - 7.13.9
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.16
+  - dependency-name: puppeteer
+    versions:
+    - 6.0.0
+    - 7.0.0
+    - 7.0.4
+  - dependency-name: karma
+    versions:
+    - 6.0.3
+    - 6.0.4
