@@ -33,6 +33,6 @@
     "gulp-order": "^1.2.0",
     "gulp-sourcemaps": "^3.0.0",
     "jasmine-core": "^3.10.1",
-    "puppeteer": "^13.0.1"
+    "puppeteer": "^13.1.1"
   }
 }
