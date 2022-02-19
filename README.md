@@ -1,8 +1,7 @@
 # Empty Site
 
 [![Known Vulnerabilities](https://snyk.io/test/github/shirblc/gulp-site-template/badge.svg?targetFile=package.json)](https://snyk.io/test/github/shirblc/gulp-site-template?targetFile=package.json)
-[![dependencies Status](https://david-dm.org/shirblc/gulp-site-template/status.svg)](https://david-dm.org/shirblc/gulp-site-template)
-[![devDependencies Status](https://david-dm.org/shirblc/gulp-site-template/dev-status.svg)](https://david-dm.org/shirblc/gulp-site-template)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/shirblc/gulp-site-template)
 
 ## Version
 
