@@ -30,7 +30,7 @@
     "karma-jasmine": "^4.0.1",
     "karma-jasmine-html-reporter": "^1.7.0",
     "karma-sourcemap-loader": "^0.3.8",
-    "postcss": "^8.4.7",
+    "postcss": "^8.4.8",
     "puppeteer": "^13.4.1"
   }
 }
