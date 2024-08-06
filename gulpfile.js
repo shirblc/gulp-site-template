@@ -6,7 +6,6 @@ const uglify = require("gulp-terser");
 const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
 const order = require("gulp-order");
-const Server = require('karma').Server;
 
 //copies the html to the disribution folder
 function copyHtml()
@@ -65,14 +64,6 @@ function scriptsDist()
 		.pipe(gulp.dest("dist/js"))
 }
 
-// automatic testing via Karma
-function unitTest()
-{
-	return new Server({
-	    configFile: __dirname + '/karma.conf.js'
-	  }).start();
-}
-
 //prepare for distribution
 function dist()
 {
@@ -100,6 +91,5 @@ exports.copyImgs = copyImgs;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.scriptsDist = scriptsDist;
-exports.unitTest = unitTest;
 exports.dist = dist;
 exports.watch = watch;

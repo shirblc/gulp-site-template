@@ -80,18 +80,11 @@ The site uses several tools to maximize compatibility:
 8. **Jasmine** - An open-source behaviour-driven testing framework. For more information, check Jasmine's [official site](https://jasmine.github.io). Included packages:
     - **jasmine-core**
     - **jasmine-spec-reporter**
-9. **Karma** - An open-source test-runner, used to run the tests on various devices with a test server. For more information, check Karma's [official site](https://karma-runner.github.io/latest/index.html). Included packages:
-    - **karma**
-    - **karma-jasmine** - A Karma adapter for the Jasmine framework. [Project repo.](https://github.com/karma-runner/karma-jasmine)
-    - **karma-jasmine-html-reporter** - A reporter that shows test results in HTML. [NPM page.](https://www.npmjs.com/package/karma-jasmine-html-reporter).
-    - **karma-chrome-launcher** - A launcher for Chrome, Chrome Canary and Chromuim. [Project repo.](https://github.com/karma-runner/karma-chrome-launcher).
-    - **karma-coverage** - Code coverage generator. [Project repo.](https://github.com/karma-runner/karma-coverage)
-    - **karma-coverage-istanbul-reporter** - Code coverage generator reporter. [NPM page.](https://www.npmjs.com/package/karma-coverage-istanbul-reporter)
-    - **karma-sourcemap-loader** - A preprocessor that loads existing source maps. [NPM page.](https://www.npmjs.com/package/karma-sourcemap-loader)
+    - **jasmine-browser-runner**
 
 ## Tests
 
-There's a test file in [tests/specs.js](./tests/specs.js), in which all site tests are written. The Karma test runner then runs this tests file against the final distribution version of the site's script. Tests are run using `gulp unitTest`.
+There's a test file in [tests/specs.js](./tests/specs.js), in which all site tests are written. The Jasmine browser runner then runs this tests file against the final distribution version of the site's script. Tests are run using `npm run test`.
 
 ## Known Issues
 

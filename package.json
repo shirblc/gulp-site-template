@@ -7,14 +7,21 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp jasmineBrowserTest",
+    "coverage": "nyc --reporter=lcov npm run test"
+  },
+  "nyc": {
+    "report-dir": "spec/coverage",
+    "exclude": [
+      "spec/**/*"
+    ]
   },
   "author": "Shir Bar Lev",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
@@ -22,15 +29,10 @@
     "gulp-postcss": "^10.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
-    "jasmine-core": "^4.6.0",
-    "karma": "^6.4.4",
-    "karma-chrome-launcher": "^3.2.0",
-    "karma-coverage": "^2.2.1",
-    "karma-coverage-istanbul-reporter": "^3.0.3",
-    "karma-jasmine": "^5.1.0",
-    "karma-jasmine-html-reporter": "^2.1.0",
-    "karma-sourcemap-loader": "^0.4.0",
-    "postcss": "^8.4.40",
+    "jasmine-browser-runner": "^2.5.0",
+    "jasmine-core": "^5.2.0",
+    "nyc": "^17.0.0",
+    "postcss": "^8.4.41",
     "puppeteer": "^22.15.0"
   }
 }
