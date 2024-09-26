@@ -33,6 +33,6 @@
     "jasmine-core": "^5.3.0",
     "nyc": "^17.1.0",
     "postcss": "^8.4.47",
-    "puppeteer": "^23.4.0"
+    "puppeteer": "^23.4.1"
   }
 }
