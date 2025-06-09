@@ -30,7 +30,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
     "jasmine-browser-runner": "^2.5.0",
-    "jasmine-core": "^5.7.1",
+    "jasmine-core": "^5.8.0",
     "nyc": "^17.1.0",
     "postcss": "^8.5.4",
     "puppeteer": "^24.9.0"
