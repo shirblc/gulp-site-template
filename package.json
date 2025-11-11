@@ -21,7 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.3",
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.22",
     "gulp": "^5.0.1",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
